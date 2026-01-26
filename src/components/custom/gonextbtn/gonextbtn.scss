@@ -1,0 +1,55 @@
+.main-section__more {
+	position: absolute;
+	bottom: 220px;
+	right: -100px;
+	z-index: 99;
+	font-size: 14px;
+	line-height: 18px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	transition: transform 0.6s ease 0.2s, color 0.4s ease 0s, opacity 0.6s ease 0.2s, ;
+	gap: 28px;
+	transform: translateY(-20px) rotate(-90deg);
+	opacity: 0;
+	visibility: hidden;
+
+	[data-fls-loaded] & {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0px) rotate(-90deg);
+	}
+
+	@media (max-width: 767.98px) {
+		right: 0;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: rgb(126, 156, 191);
+		}
+	}
+
+	span {
+		transition: all 0.8s ease 0s;
+		transform: rotate(90deg);
+		animation: translate 5000ms ease-out infinite;
+	}
+}
+
+@keyframes translate {
+	0% {
+		transform: rotate(90deg) translate(0, 0px);
+		opacity: 1;
+	}
+
+	50% {
+		transform: rotate(90deg) translate(0, 20px);
+		opacity: 0.2;
+	}
+
+	100% {
+		transform: rotate(90deg) translate(0, 0px);
+		opacity: 1;
+	}
+}

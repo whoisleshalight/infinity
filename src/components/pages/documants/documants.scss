@@ -1,0 +1,129 @@
+.documants {
+	position: relative;
+
+	// padding-top: 70px;
+	.documants__section {
+		@include adaptiveValue("padding-top", 170, 80, 0, 1919.98, 375);
+		@include adaptiveValue("padding-bottom", 150, 80, 0, 1919.98, 375);
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 70px;
+		@include adaptiveValue("font-size", 70, 34, 0, 1919.98, 375);
+		font-weight: 500;
+		background: -webkit-linear-gradient(0deg, #8ec6ff, #edf6ff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__info {
+		line-height: 130%;
+		text-align: center;
+
+		font-weight: 500;
+		margin-top: 30px;
+		@include adaptiveValue("font-size", 20, 14, 0, 1919.98, 375);
+		@include adaptiveValue("margin-top", 30, 14, 0, 1919.98, 375);
+
+		&._italic {
+			font-style: italic;
+		}
+	}
+
+	&__items {
+		@include adaptiveValue("margin-top", 100, 40, 0, 1919.98, 375);
+	}
+
+	&__item {}
+}
+
+.item-documents {
+	gap: 50px;
+
+	@media (min-width: toEm(991.98)) {
+		display: flex;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 100px;
+		@include adaptiveValue("margin-bottom", 100, 40, 0, 1919.98, 375);
+	}
+
+	&__title {
+		line-height: 120%;
+
+		flex: 0 0 240px;
+		@include adaptiveValue("font-size", 26, 18, 0, 1919.98, 375);
+		font-weight: 500;
+		line-height: 130%;
+		background: -webkit-linear-gradient(0deg, #8ec6ff, #edf6ff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		@media (min-width: toEm(991.98)) {
+			text-align: right;
+		}
+	}
+
+	&__info {
+		margin-top: toRem(4);
+		flex: 1 1 auto;
+
+		p {
+			@include adaptiveValue("font-size", 18, 14, 0, 1919.98, 375);
+
+			line-height: 130%;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			@media (min-width: toEm(991.98)) {
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.item-documents__info {
+	ul {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+
+		li {
+			@include adaptiveValue("font-size", 18, 14, 0, 1919.98, 375);
+			line-height: 130%;
+
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+
+			@media (min-width: toEm(991.98)) {
+				font-weight: 500;
+			}
+		}
+
+		@media (min-width: toEm(991.98)) {
+			padding-left: toRem(10);
+		}
+	}
+}
+
+.documants {
+	.documants__section {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(20px);
+		transition: all 0.4s ease 0s;
+
+		[data-fls-loaded] & {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0, 0);
+		}
+	}
+}
+
+//========================================================================================================================================================

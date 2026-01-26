@@ -1,0 +1,1 @@
+import "./gonextbtn.scss"

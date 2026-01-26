@@ -1,0 +1,47 @@
+[data-fls-showmore] {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+[data-fls-showmore-content] {}
+
+[data-fls-showmore-button] {
+	width: 90px;
+	height: 20px;
+	position: relative;
+
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: auto;
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		line-height: 120%;
+		transition: all 0.4s;
+
+		svg {
+			height: 14px;
+			object-fit: contain;
+		}
+
+		&:last-child {
+			opacity: 0;
+		}
+
+		.--showmore-active & {
+			opacity: 0;
+
+			&:last-child {
+				opacity: 1;
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@font-face { 
+	font-family: "iconfont"; 
+	font-display: swap;
+	src: url("D://open_projects/front/blue_island/src/assets/svgicons/preview/iconfont.woff2?6b603cfe57194f3cccb5e17e28aac8b7") format("woff2"); 
+} 
+[class*="--icon-"]::before{
+	font-family: iconfont; 
+}
+	[class*="--icon-08"]::before { 
+		content: "\f101"; 
+	} 
+	[class*="--icon-07"]::before { 
+		content: "\f102"; 
+	} 
+	[class*="--icon-06"]::before { 
+		content: "\f103"; 
+	} 
+	[class*="--icon-05"]::before { 
+		content: "\f104"; 
+	} 
+	[class*="--icon-04"]::before { 
+		content: "\f105"; 
+	} 
+	[class*="--icon-03"]::before { 
+		content: "\f106"; 
+	} 
+	[class*="--icon-02"]::before { 
+		content: "\f107"; 
+	} 
+	[class*="--icon-01"]::before { 
+		content: "\f108"; 
+	} 

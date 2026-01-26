@@ -1,0 +1,135 @@
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+
+// Блок зі спойлерами
+.spollers {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+// Спойлер
+.spollers__item {
+	@include adaptiveValue("font-size", 20, 16, 0, 1919.98, 375);
+
+	background: linear-gradient(156deg, rgba(13, 38, 46, 1) 0%, rgba(7, 15, 28, 1) 100%);
+	border-radius: 10px;
+	border: 1px solid #3a6e67;
+	display: flex;
+	flex-direction: column;
+}
+// Заголовок спойлера
+.spollers__title {
+	width: 100%;
+	cursor: default;
+	text-align: left;
+	position: relative;
+	list-style: none;
+
+	box-shadow: 0px 0px 10px 0px transparent;
+	transition: all 0.4s;
+	padding-right: 60px;
+	padding-left: 30px;
+	border-radius: 10px;
+	@include adaptiveValue("padding-top", 25, 15, 0, 1919.98, 375);
+	@include adaptiveValue("padding-bottom", 25, 15, 0, 1919.98, 375);
+	@include adaptiveValue("padding-left", 30, 15, 0, 1919.98, 375);
+	@include adaptiveValue("padding-right", 60, 30, 0, 1919.98, 375);
+
+	@include adaptiveValue("font-size", 20, 16, 0, 1919.98, 375);
+	font-weight: 500;
+	background: -webkit-linear-gradient(0deg, #8effe3, #ffffff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	&::marker,
+	&::-webkit-details-marker {
+		display: none;
+	}
+	.--spoller-init & {
+		cursor: pointer;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			background-color: #9cfef3;
+			height: 2px;
+			width: 10px;
+			border-radius: 4px;
+			overflow: hidden;
+			transition: transform 0.5s ease 0s;
+			@media (min-width: toEm(320)) {
+				right: 15px;
+			}
+			@media (min-width: toEm(767.98)) {
+				right: 30px;
+			}
+		}
+		&::before {
+			transform: translate(-75%, -50%) rotate(40deg);
+		}
+		&::after {
+			transform: translate(0, -50%) rotate(-40deg);
+		}
+		&.--spoller-active {
+			&::before {
+				transform: translateX(-75%) rotate(-40deg);
+			}
+			&::after {
+				transform: rotate(40deg);
+			}
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0px 0px 10px 0px #7997b9;
+			&.--spoller-active {
+				box-shadow: 0px 0px 10px 0px transparent;
+			}
+		}
+	}
+}
+// Контент спойлера
+.spollers__body {
+	@include adaptiveValue("padding-bottom", 25, 15, 0, 1919.98, 375);
+	@include adaptiveValue("padding-left", 30, 15, 0, 1919.98, 375);
+	@include adaptiveValue("padding-right", 30, 15, 0, 1919.98, 375);
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-left: 30px;
+	line-height: 130%;
+	font-weight: 500;
+	font-size: 14px;
+	color: #7ebfb9;
+}
+
+// .--spoller-init & {
+// 	position: relative;
+// 	width: 100%;
+// 	text-align: left;
+// 	&::before,
+// 	&::after {
+// 		content: "";
+// 		position: absolute;
+// 		right: 0;
+// 		top: toRem(12);
+// 		height: toRem(1);
+// 		transition: all 0.3s ease 0s;
+// 		width: toRem(10);
+// 		background-color: #000;
+// 	}
+// 	&::before {
+// 		transform: rotate(40deg);
+// 		right: toRem(7);
+// 	}
+// 	&::after {
+// 		transform: rotate(-40deg);
+// 	}
+// }
+// &.--spoller-active {
+// 	&::before {
+// 		transform: rotate(-40deg);
+// 	}
+// 	&::after {
+// 		transform: rotate(40deg);
+// 	}
+// }
