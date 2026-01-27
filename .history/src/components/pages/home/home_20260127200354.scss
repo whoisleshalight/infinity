@@ -589,8 +589,8 @@
 		}
 	}
 }
-.divisions{overflow: hidden;
-	padding-top: 150px;position: relative;
+.divisions{
+	padding-top: 150px;
 	padding-bottom: 150px;
 	.divisions__logo{
 		display: flex;justify-content: center;align-items: center;
@@ -599,16 +599,8 @@
 			width: 300px;height: auto;object-fit: contain;object-position: center;
 		}
 	}
-	.divisions__items{
-		position: relative;
-		&::before{
-			content:'';
-			position: absolute;top: 50%;left: 0;width: 100%;height: 100%;
-			background-size: contain;
-			transform: translateY(-50%);
-			background-position: center;
-			background-repeat: no-repeat !important;background: url('@img/bbg.svg');
-		}
+	.divisions__container{
+		
 	}
 }
 .bg-animation {}

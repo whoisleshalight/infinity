@@ -589,7 +589,7 @@
 		}
 	}
 }
-.divisions{overflow: hidden;
+.divisions{
 	padding-top: 150px;position: relative;
 	padding-bottom: 150px;
 	.divisions__logo{
@@ -607,7 +607,7 @@
 			background-size: contain;
 			transform: translateY(-50%);
 			background-position: center;
-			background-repeat: no-repeat !important;background: url('@img/bbg.svg');
+			background-repeat: no-repeat;background: url('@img/bbg.svg');
 		}
 	}
 }

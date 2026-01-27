@@ -1,9 +1,5 @@
-$colorStars: #09101d;
-// 344461
-	$colorStars2: #344461;
+$colorStars: #344461;
 
-.divisions{
-}
 ._title-02 {
 	@include adaptiveValue("font-size", 50, 24, 0, 1919.98, 375);
 	text-align: center;
