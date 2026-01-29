@@ -577,16 +577,16 @@
 		// 	grid-template-columns: 1fr 1fr 1fr;
 		// }
 
-		// @media (min-width:toEm(991.98)) {
+		@media (min-width:toEm(991.98)) {
 
-		// 	&.--watcher-view {
-		// 		.solution-item {
-		// 			transform: translate(0, 0);
-		// 			opacity: 1;
-		// 			visibility: visible;
-		// 		}
-		// 	}
-		// }
+			&.--watcher-view {
+				.solution-item {
+					transform: translate(0, 0);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
 	}
 }
 
@@ -607,17 +607,6 @@
 			height: auto;
 			object-fit: contain;
 			object-position: center;
-				transform: translateY(60px);
-		opacity: 0;
-		visibility: hidden;
-	transition: all 0.4s ease 0s; 
-	
-
-		&.--watcher-view{
-			opacity: 1;		transform: translateY(0px);
-
-			visibility: visible;pointer-events: all;
-		}
 		}
 	}
 
@@ -653,28 +642,16 @@ width: 440px;
 		transform: translateY(60px);
 		opacity: 0;
 		visibility: hidden;
-		&:nth-child(1){transition: all 0.4s ease 0s; }
-		&:nth-child(2){transition: all 0.4s ease 0.1s; }
-		&:nth-child(3){transition: all 0.4s ease 0.2s; }
+		&:nth-child(1){transition: all 0.4s;}
+		&:nth-child(2){transition: all 0.4s;}
+		&:nth-child(3){transition: all 0.4s;}
 		&.--watcher-view{
-			opacity: 1;		transform: translateY(0px);
-
+			opacity: 1;
 			visibility: visible;pointer-events: all;
 		}
 	}
 }
 
-.solution__body{
-	transform: translateY(20px);
-	opacity: 0;
-	visibility: hidden;transition: all 0.6s;
-
-}
-	.solution__body.--watcher-view {
-		transform: translate(0, 0);
-		opacity: 1;
-		visibility: visible;
-	}
 .solution-item {
 	border-radius: 14px;
 	border: 1px solid #657994;
@@ -682,7 +659,9 @@ width: 440px;
 	@include adaptiveValue("padding", 30, 20, 0, 1919.98, 375);
 	display: flex;
 	flex-direction: column;
-
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(40px);
 
 	@media (max-width: toEm(991.98)) {
 		&.--watcher-view {
@@ -698,7 +677,19 @@ width: 440px;
 
 	}
 
+	@media (min-width:toEm(991.98)) {
+		&:nth-child(1) {
+			transition: all 0.6s ease 0.2s;
+		}
 
+		&:nth-child(2) {
+			transition: all 0.6s ease .4s;
+		}
+
+		&:nth-child(3) {
+			transition: all 0.6s ease .6s;
+		}
+	}
 
 	&__title {
 		font-weight: 500;
@@ -1191,7 +1182,6 @@ width: 440px;
 		border-bottom-left-radius: 12px;
 		border-bottom-right-radius: 12px;
 		// padding: 0 40px 40px 40px;
-		@include adaptiveValue("padding-top", 40, 20, 0, 1919.98, 375);
 		@include adaptiveValue("padding-bottom", 40, 20, 0, 1919.98, 375);
 		@include adaptiveValue("padding-left", 40, 20, 0, 1919.98, 375);
 		@include adaptiveValue("padding-right", 40, 20, 0, 1919.98, 375);

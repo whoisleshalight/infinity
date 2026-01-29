@@ -4,8 +4,7 @@
 	min-width: 0;
 	position: relative;
 	
-	&__box{    position: relative;
-    z-index: 2;
+	&__box{
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(20px);

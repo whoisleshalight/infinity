@@ -667,14 +667,14 @@ width: 440px;
 .solution__body{
 	transform: translateY(20px);
 	opacity: 0;
-	visibility: hidden;transition: all 0.6s;
-
-}
-	.solution__body.--watcher-view {
+	visibility: hidden;
+	.--watcher-view & {
 		transform: translate(0, 0);
 		opacity: 1;
 		visibility: visible;
 	}
+}
+
 .solution-item {
 	border-radius: 14px;
 	border: 1px solid #657994;
@@ -1191,7 +1191,6 @@ width: 440px;
 		border-bottom-left-radius: 12px;
 		border-bottom-right-radius: 12px;
 		// padding: 0 40px 40px 40px;
-		@include adaptiveValue("padding-top", 40, 20, 0, 1919.98, 375);
 		@include adaptiveValue("padding-bottom", 40, 20, 0, 1919.98, 375);
 		@include adaptiveValue("padding-left", 40, 20, 0, 1919.98, 375);
 		@include adaptiveValue("padding-right", 40, 20, 0, 1919.98, 375);

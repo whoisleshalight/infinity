@@ -1191,7 +1191,6 @@ width: 440px;
 		border-bottom-left-radius: 12px;
 		border-bottom-right-radius: 12px;
 		// padding: 0 40px 40px 40px;
-		@include adaptiveValue("padding-top", 40, 20, 0, 1919.98, 375);
 		@include adaptiveValue("padding-bottom", 40, 20, 0, 1919.98, 375);
 		@include adaptiveValue("padding-left", 40, 20, 0, 1919.98, 375);
 		@include adaptiveValue("padding-right", 40, 20, 0, 1919.98, 375);

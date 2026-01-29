@@ -247,10 +247,6 @@
 					@media (min-width: toEm(1439.98)) {
 						font-size: 17px;
 					}
-					&.--navigator-active{
-						color: $whiteColor;
-						pointer-events: none;
-					}
 				}
 
 				@media (any-hover: hover) {
