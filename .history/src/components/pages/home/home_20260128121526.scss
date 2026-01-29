@@ -562,20 +562,20 @@
 	}
 
 	&__body {
-		// display: grid;
-		// @include adaptiveValue("gap", 30, 20, 0, 1919.98, 375);
+		display: grid;
+		@include adaptiveValue("gap", 30, 20, 0, 1919.98, 375);
 
-		// @media (min-width: toEm(320)) {
-		// 	grid-template-columns: 1fr;
-		// }
+		@media (min-width: toEm(320)) {
+			grid-template-columns: 1fr;
+		}
 
-		// @media (min-width: toEm(575.98)) {
-		// 	// grid-template-columns: 1fr 1fr;
-		// }
+		@media (min-width: toEm(575.98)) {
+			// grid-template-columns: 1fr 1fr;
+		}
 
-		// @media (min-width: toEm(991.98)) {
-		// 	grid-template-columns: 1fr 1fr 1fr;
-		// }
+		@media (min-width: toEm(991.98)) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 
 		@media (min-width:toEm(991.98)) {
 
@@ -1550,10 +1550,6 @@ width: 440px;
 }
 ._text-03{
 	font-size: 24px;
-	font-weight: 500;
-	span{
-		font-weight: 700;
-	}
 }
 .cart-services {
 	border-radius: 15px;

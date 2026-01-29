@@ -10,7 +10,15 @@
 
 .divisions{	$colorStars2: var(--color-stars);
 }
+.divisions__container{
+	position: relative;
+}
 
+.divisions-bg-01{
+position: absolute;
+top: -200px;left: -200px;
+width: 600px;
+}
 ._title-02 {
 	@include adaptiveValue("font-size", 50, 24, 0, 1919.98, 375);
 	text-align: center;

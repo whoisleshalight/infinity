@@ -577,16 +577,16 @@
 		// 	grid-template-columns: 1fr 1fr 1fr;
 		// }
 
-		@media (min-width:toEm(991.98)) {
+		// @media (min-width:toEm(991.98)) {
 
-			&.--watcher-view {
-				.solution-item {
-					transform: translate(0, 0);
-					opacity: 1;
-					visibility: visible;
-				}
-			}
-		}
+		// 	&.--watcher-view {
+		// 		.solution-item {
+		// 			transform: translate(0, 0);
+		// 			opacity: 1;
+		// 			visibility: visible;
+		// 		}
+		// 	}
+		// }
 	}
 }
 

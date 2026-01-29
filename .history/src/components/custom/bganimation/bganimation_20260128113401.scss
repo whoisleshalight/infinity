@@ -10,7 +10,9 @@
 
 .divisions{	$colorStars2: var(--color-stars);
 }
-
+.divisions-bg-01{
+	
+}
 ._title-02 {
 	@include adaptiveValue("font-size", 50, 24, 0, 1919.98, 375);
 	text-align: center;

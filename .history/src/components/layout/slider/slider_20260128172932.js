@@ -184,9 +184,9 @@ function initSliders() {
 
 			}
 		});
-	}	
+	}	console.log('1');
 	if (document.querySelector('.carts-solution__slider')) {
-	
+		console.log('1');
 		new Swiper('.carts-solution__slider', { // <- Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
@@ -194,7 +194,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
-			spaceBetween: 30,
+			spaceBetween: 60,
 			//autoHeight: true,
 			speed: 800,
 			parallax: true,
@@ -218,10 +218,10 @@ function initSliders() {
 			/*
 
 			*/
-			// pagination: {
-			// 	el: '.archive-slide-pagination',
-			// 	clickable: true,
-			// },
+			pagination: {
+				el: '.archive-slide-pagination',
+				clickable: true,
+			},
 			// Скроллбар
 			/*
 			scrollbar: {
@@ -231,10 +231,10 @@ function initSliders() {
 			*/
 
 			// Кнопки "вліво/вправо"
-			// navigation: {
-			// 	prevEl: '.archive-slide-button-prev',
-			// 	nextEl: '.archive-slide-button-next',
-			// },
+			navigation: {
+				prevEl: '.archive-slide-button-prev',
+				nextEl: '.archive-slide-button-next',
+			},
 			/*
 			// Брейкпоінти
 			breakpoints: {

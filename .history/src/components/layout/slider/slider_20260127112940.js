@@ -8,11 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import {
-	Navigation,
-	Pagination,
-	Parallax
-} from 'swiper/modules';
+import { Navigation, Pagination, Parallax } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -157,84 +153,6 @@ function initSliders() {
 				prevEl: '.archive-slide-button-prev',
 				nextEl: '.archive-slide-button-next',
 			},
-			/*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-			// Події
-			on: {
-
-			}
-		});
-	}	
-	if (document.querySelector('.carts-solution__slider')) {
-	
-		new Swiper('.carts-solution__slider', { // <- Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
-			modules: [Navigation, Pagination, Parallax],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 3,
-			spaceBetween: 30,
-			//autoHeight: true,
-			speed: 800,
-			parallax: true,
-			// initialSlide:1,
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
-
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-			// Пагінація
-			/*
-
-			*/
-			// pagination: {
-			// 	el: '.archive-slide-pagination',
-			// 	clickable: true,
-			// },
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "вліво/вправо"
-			// navigation: {
-			// 	prevEl: '.archive-slide-button-prev',
-			// 	nextEl: '.archive-slide-button-next',
-			// },
 			/*
 			// Брейкпоінти
 			breakpoints: {
