@@ -21,7 +21,26 @@ export function FLS(text, vars = '') {
 	}
 }
 /* Перевірка мобільного браузера */
-export const isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
+export const isMobile = {
+	Android: function () {
+		return navigator.userAgent.match(/Android/i);
+	},
+	BlackBerry: function () {
+		return navigator.userAgent.match(/BlackBerry/i);
+	},
+	iOS: function () {
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	},
+	Opera: function () {
+		return navigator.userAgent.match(/Opera Mini/i);
+	},
+	Windows: function () {
+		return navigator.userAgent.match(/IEMobile/i);
+	},
+	any: function () {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+};
 /* Додавання класу touch для HTML, якщо браузер мобільний */
 export function addTouchAttr() {
 	// Додавання data-fls-touch для HTML, якщо браузер мобільний
@@ -39,7 +58,9 @@ export function addLoadedAttr() {
 }
 // Отримання хешу на адресі сайту
 export function getHash() {
-	if (location.hash) { return location.hash.replace('#', ''); }
+	if (location.hash) {
+		return location.hash.replace('#', '');
+	}
 }
 // Вказівка хеша на адресу сайту
 export function setHash(hash) {
@@ -201,13 +222,20 @@ export function dataMediaQueries(array, dataSetValue) {
 		.filter(item => item.dataset[dataSetValue])
 		.map(item => {
 			const [value, type = 'max'] = item.dataset[dataSetValue].split(',');
-			return { value, type, item };
+			return {
+				value,
+				type,
+				item
+			};
 		});
 
 	if (media.length === 0) return [];
 
 	// Отримуємо унікальні брейкпоінти
-	const breakpointsArray = media.map(({ value, type }) => `(${type}-width: ${value}px),${value},${type}`);
+	const breakpointsArray = media.map(({
+		value,
+		type
+	}) => `(${type}-width: ${value}px),${value},${type}`);
 	const uniqueQueries = [...new Set(breakpointsArray)];
 
 	return uniqueQueries.map(query => {
@@ -217,7 +245,10 @@ export function dataMediaQueries(array, dataSetValue) {
 		// Фільтруємо об'єкти з потрібними умовами
 		const itemsArray = media.filter(item => item.value === mediaBreakpoint && item.type === mediaType);
 
-		return { itemsArray, matchMedia }
+		return {
+			itemsArray,
+			matchMedia
+		}
 	});
 }
 // Модуль плавної проктутки до блоку

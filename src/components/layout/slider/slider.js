@@ -22,7 +22,7 @@ EffectFade, Lazy, Manipulation
 
 // Стилі Swiper
 // Підключення базових стилів
-import "./slider.scss";
+import './slider.scss';
 // Повний набір стилів з node_modules
 // import 'swiper/css/bundle';
 
@@ -107,9 +107,11 @@ function initSliders() {
 	// 		}
 	// 	});
 	// }
-	if (document.querySelector('.archive__slider')) { // <- Вказуємо склас потрібного слайдера
+	if (document.querySelector('.archive__slider')) {
+		// <- Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.archive__slider', { // <- Вказуємо склас потрібного слайдера
+		new Swiper('.archive__slider', {
+			// <- Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
 			modules: [Navigation, Pagination, Parallax],
@@ -180,21 +182,19 @@ function initSliders() {
 			},
 			*/
 			// Події
-			on: {
-
-			}
+			on: {},
 		});
-	}	
+	}
 	if (document.querySelector('.carts-solution__slider')) {
-	
-		new Swiper('.carts-solution__slider', { // <- Вказуємо склас потрібного слайдера
+		new Swiper('.carts-solution__slider', {
+			// <- Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
 			modules: [Navigation, Pagination, Parallax],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
-			spaceBetween: 30,
+			spaceBetween: 20,
 			//autoHeight: true,
 			speed: 800,
 			parallax: true,
@@ -213,7 +213,14 @@ function initSliders() {
 				disableOnInteraction: false,
 			},
 			*/
-
+			pagination: {
+				el: '.home-slide-pagination',
+				clickable: true,
+			},
+			navigation: {
+				prevEl: '.home-slide-button-prev',
+				nextEl: '.home-slide-button-next',
+			},
 			// Пагінація
 			/*
 
@@ -258,11 +265,10 @@ function initSliders() {
 			},
 			*/
 			// Події
-			on: {
-
-			}
+			on: {},
 		});
 	}
 }
 document.querySelector('[data-fls-slider]') ?
-	window.addEventListener("load", initSliders) : null
+	window.addEventListener('load', initSliders) :
+	null;
