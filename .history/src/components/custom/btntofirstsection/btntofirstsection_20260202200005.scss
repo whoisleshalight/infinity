@@ -1,0 +1,47 @@
+.button-go-top {
+	position: fixed;
+	bottom: 33px;
+	right: 20px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	z-index: 9999;
+	cursor: pointer;
+	transition: all 0.6s ease 0s;
+	transform: translateY(200px);
+	background: rgba(7, 16, 27, 0.71);
+	border: 2px solid rgba(107, 127, 171, 0.768627451);
+
+	&._active {
+		transform: translateY(0);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			// border: 2px solid #0d082e;
+
+			svg {
+				path {}
+
+				transform: translateY(-10px);
+			}
+		}
+	}
+
+	svg {
+		transition: all 0.6s ease 0s;
+		flex: 0 0 20px;
+		object-fit: contain;
+
+		path {
+			fill: #fff;
+		}
+	}
+	@media (min-width:toEm(575.98)){
+		  	width: 60px;
+	height: 60px;
+	}
+}
