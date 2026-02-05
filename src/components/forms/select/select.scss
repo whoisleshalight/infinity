@@ -3,23 +3,29 @@
 .select {
 	min-width: 0;
 	position: relative;
-	
-	&__box{    position: relative;
-    z-index: 2;
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(20px);
-		transition: all 0.6s;
 
-		&.--watcher-view {
-			opacity: 1;
-			visibility: visible;
-			transform: translate(0, 0);
+	&__box {
+		position: relative;
+		z-index: 2;
+
+		@media (min-width:toEm(575.98)) {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(20px);
+			transition: all 0.6s;
+
+			&.--watcher-view {
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0, 0);
+			}
 		}
-	&:not(:last-child) {
-		margin-bottom: 10px;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
 	}
-	}
+
 	// .select__body
 	&__body {
 		position: relative;
@@ -49,15 +55,18 @@
 		border-radius: 10px;
 		height: 100%;
 		line-height: 130%;
-	
+
 		padding: 10px;
 		background-color: #060e1b;
-		@media (min-width:toEm(320)){
-			  min-height: 58px;
+
+		@media (min-width:toEm(320)) {
+			min-height: 58px;
 		}
-		@media (min-width:toEm(575.98)){
-			  	min-height: 68px;
+
+		@media (min-width:toEm(575.98)) {
+			min-height: 68px;
 		}
+
 		> * {
 			flex: 1 1 auto;
 		}
