@@ -368,9 +368,11 @@
 .about {
 	position: relative;
 	background-color: #07101B;
-	.element-light{
+
+	.element-light {
 		z-index: 3;
 	}
+
 	&__container {
 		@include adaptiveValue("padding-top", 150, 50, 0, 1919.98, 375);
 		@include adaptiveValue("padding-bottom", 150, 50, 0, 1919.98, 375);
@@ -483,7 +485,9 @@
 
 	}
 
-	&__subinfo {z-index: 4;position: relative;
+	&__subinfo {
+		z-index: 4;
+		position: relative;
 		color: #edf6ff;
 		margin-bottom: 20px;
 		@include adaptiveValue("font-size", 16, 15, 0, 1919.98, 375);
@@ -528,39 +532,41 @@
 	}
 
 	&__pictures {
-		position: relative;
-		&::before{
-			content:'';
-			position: absolute;
-			top: 0;left: 0;width: 100%;
-			height: 30px;z-index: 2;
-			background: linear-gradient(180deg,rgba(7, 16, 27, 1) 0%, rgba(7, 16, 27, 0) 100%);
+		// position: relative;
 
-		}
-		&::after{
-			content:'';
-			position: absolute;
-			bottom: 0;left: 0;width: 100%;
-			height: 30px;z-index: 2;
-			background: linear-gradient(0deg,rgba(7, 16, 27, 1) 0%, rgba(7, 16, 27, 0) 100%);
-		}
-		span{
-		&::before{
-			content:'';
-			position: absolute;
-			top: 0;right: 0;height: 100%;
-			width: 30px;z-index: 2;
-			background: linear-gradient(-90deg,rgba(7, 16, 27, 1) 0%, rgba(7, 16, 27, 0) 100%);
 
-		}
-		&::after{
-			content:'';
-			position: absolute;
-				top: 0;left: 0;height: 100%;
-			width: 30px;z-index: 2;
-			background: linear-gradient(90deg,rgba(7, 16, 27, 1) 0%, rgba(7, 16, 27, 0) 100%);
-		}
-		}
+		// &::before{
+		// 	content:'';
+		// 	position: absolute;
+		// 	top: 0;left: 0;width: 100%;
+		// 	height: 30px;z-index: 2;
+		// 	background: linear-gradient(180deg,rgba(7, 16, 27, 1) 0%, rgba(7, 16, 27, 0) 100%);
+
+		// }
+		// &::after{
+		// 	content:'';
+		// 	position: absolute;
+		// 	bottom: 0;left: 0;width: 100%;
+		// 	height: 30px;z-index: 2;
+		// 	background: linear-gradient(0deg,rgba(7, 16, 27, 1) 0%, rgba(7, 16, 27, 0) 100%);
+		// }
+		// span{
+		// &::before{
+		// 	content:'';
+		// 	position: absolute;
+		// 	top: 0;right: 0;height: 100%;
+		// 	width: 30px;z-index: 2;
+		// 	background: linear-gradient(-90deg,rgba(7, 16, 27, 1) 0%, rgba(7, 16, 27, 0) 100%);
+
+		// }
+		// &::after{
+		// 	content:'';
+		// 	position: absolute;
+		// 		top: 0;left: 0;height: 100%;
+		// 	width: 30px;z-index: 2;
+		// 	background: linear-gradient(90deg,rgba(7, 16, 27, 1) 0%, rgba(7, 16, 27, 0) 100%);
+		// }
+		// }
 		@media (min-width: toEm(320)) {
 			max-width: 80%;
 		}
