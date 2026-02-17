@@ -445,7 +445,18 @@ html:not([data-fls-loaded]) {
 			}
 		}
 	}
-
+	a.cart{
+		@media (any-hover: hover){
+			&:hover{
+				img{
+					transform: scale(1.1);
+				}
+				.cart__link{
+					color: #fff;
+				}
+			}
+		}
+	}
 }
 
 .cart {
@@ -453,7 +464,7 @@ html:not([data-fls-loaded]) {
 	border-radius: 10px;
 	overflow: hidden;
 	padding: 1px;
-
+	display: block;position: relative;
 
 
 
@@ -642,7 +653,9 @@ ul.bread {
 	font-weight: 500;
 	text-align: center;
 	line-height: 130%;
-	@include adaptiveValue("margin-bottom", 50, 20, 0, 1919.98, 375);
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 50, 20, 0, 1919.98, 375);
+	}
 
 	p {
 
