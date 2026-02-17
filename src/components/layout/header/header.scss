@@ -224,7 +224,13 @@
 					border-radius: 5px;
 					overflow: hidden;
 					transition: all 0.4s;
+
 					// background: linear-gradient(180deg, rgba(168, 188, 255, 0) 0%, rgba(144, 179, 232, 0) 100%);
+					@media (any-hover: hover) {
+						&:hover {
+							color: $whiteColor;
+						}
+					}
 
 					span {
 						transition: all 0.4s;

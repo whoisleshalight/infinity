@@ -11,7 +11,8 @@ import Swiper from 'swiper';
 import {
 	Navigation,
 	Pagination,
-	Parallax
+	Parallax,
+	Autoplay
 } from 'swiper/modules';
 /*
 Основні модулі слайдера:
@@ -190,7 +191,7 @@ function initSliders() {
 			// <- Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation, Pagination, Parallax],
+			modules: [Navigation, Pagination, Parallax, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -201,18 +202,19 @@ function initSliders() {
 			// initialSlide:1,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
 			/*
 			// Ефекти
 			effect: 'fade',
+		
+			*/
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
 			pagination: {
 				el: '.home-slide-pagination',
 				clickable: true,
@@ -246,7 +248,7 @@ function initSliders() {
 			// Брейкпоінти
 	
 			*/
-					breakpoints: {
+			breakpoints: {
 				320: {
 					slidesPerView: 1,
 					spaceBetween: 20,
