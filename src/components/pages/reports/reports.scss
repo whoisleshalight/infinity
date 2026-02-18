@@ -1,12 +1,35 @@
-.reports-archive{
-	.cart{
-		text-align: center;line-height: 130%;
+.reports-archive {
+	.cart {
+		text-align: center;
+		line-height: 130%;
 	}
-	.cart__title{
+
+	.cart__title {
 		margin-top: 0;
 		font-size: 18px;
 	}
-	.cart__info{
+
+	.cart__info {
 		font-size: 14px;
 	}
+}
+
+.archive-main-object-01 {
+	position: absolute;
+	top: -60px;
+	right: -420px;
+	width: toRem(400);
+	z-index: -1;
+	height: auto;
+	object-fit: contain;
+}
+
+.archive-main-object-02 {
+	position: absolute;
+	bottom: -60px;
+	left: -420px;
+	width: toRem(400);
+	z-index: -1;
+	height: auto;
+	object-fit: contain;
 }
