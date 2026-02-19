@@ -32,8 +32,19 @@
  			z-index: 9999;
  			background: linear-gradient(145deg, #08111c 0%, #060d19 100%);
  			transition: all 0.4s;
+			
  		}
-
+		@media (min-width:320px){
+			  .preloader {
+				height: 140vh;
+				padding-bottom: 45vh;
+			}
+		}
+		@media (min-width:575.98px){
+			.preloader {
+				height: 100vh;
+			}
+		}
  		[data-fls-loaded] .preloader {
  			opacity: 0;
  			visibility: hidden;
