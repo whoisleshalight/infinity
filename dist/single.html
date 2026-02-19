@@ -1,0 +1,1226 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Home Page</title>
+		<style>
+			body{
+				background: linear-gradient(145deg, rgb(8 17 28) 0%, rgb(6, 13, 25) 100%);
+		}
+ 		.preloader {
+ 			position: fixed;
+ 			top: 0;
+ 			left: 0;
+ 			width: 100vw;
+ 			height: 100vh;
+ 			display: flex;
+ 			align-items: center;
+ 			flex-direction: column;
+ 			z-index: 9999;
+ 			background: linear-gradient(145deg, #08111c 0%, #060d19 100%);
+ 			transition: all 0.4s;
+			
+ 		}
+		@media (min-width:320px){
+			  .preloader {
+				height: 140vh;
+				padding-bottom: 45vh;
+			}
+		}
+		@media (min-width:575.98px){
+			.preloader {
+				height: 100vh;
+			}
+		}
+ 		[data-fls-loaded] .preloader {
+ 			opacity: 0;
+ 			visibility: hidden;
+ 			pointer-events: none;
+ 		}
+
+ 		.preloader__logo {
+ 			flex: 1 1 auto;
+ 		}
+
+ 		.loading-text {
+ 			text-align: center;
+ 			line-height: 100px;
+ 		}
+
+ 		.loading-text span {
+ 			display: inline-block;
+ 			margin: 0 5px;
+ 			font-weight: 700;
+ 			font-size: 16px;
+ 			color: #fff;
+ 		}
+
+ 		.loading-text span:nth-child(1) {
+ 			filter: blur(0px);
+ 			animation: blur-text 1.5s 0s infinite linear alternate;
+ 		}
+
+ 		.loading-text span:nth-child(2) {
+ 			filter: blur(0px);
+ 			animation: blur-text 1.5s 0.2s infinite linear alternate;
+ 		}
+
+ 		.loading-text span:nth-child(3) {
+ 			filter: blur(0px);
+ 			animation: blur-text 1.5s 0.4s infinite linear alternate;
+ 		}
+
+ 		.loading-text span:nth-child(4) {
+ 			filter: blur(0px);
+ 			animation: blur-text 1.5s 0.6s infinite linear alternate;
+ 		}
+
+ 		.loading-text span:nth-child(5) {
+ 			filter: blur(0px);
+ 			animation: blur-text 1.5s 0.8s infinite linear alternate;
+ 		}
+
+ 		.loading-text span:nth-child(6) {
+ 			filter: blur(0px);
+ 			animation: blur-text 1.5s 1s infinite linear alternate;
+ 		}
+
+ 		.loading-text span:nth-child(7) {
+ 			filter: blur(0px);
+ 			animation: blur-text 1.5s 1.2s infinite linear alternate;
+ 		}
+
+ 		.loading-text span:nth-child(8) {
+ 			filter: blur(0px);
+ 			animation: blur-text 1.5s 1.4s infinite linear alternate;
+ 		}
+
+ 		@keyframes blur-text {
+ 			0% {
+ 				filter: blur(0px);
+ 			}
+
+ 			100% {
+ 				filter: blur(4px);
+ 			}
+ 		}
+		</style>
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1771523946414"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1771523946414">
+	</head>
+	<body>
+		<div class="cookie" id="cookie-parent" data-fls-cookiewindow="">
+			<div class="cookie__wrapper">
+				<p class="cookie__info">
+					This website uses cookies to ensure you get the best experience on
+            our website.
+				</p>
+				<button type="button" class="cookie__btn">Accept</button>
+			</div>
+		</div>
+		<div class="preloader" data-fls-loader="">
+			<div class="preloader__logo"><!-- <img src="@img/logo-02.svg" alt="Image"> --></div>
+			<div class="preloader__box">
+				<div class="loading-text">
+					<span class="loading-text-words">L</span>
+					<span class="loading-text-words">O</span>
+					<span class="loading-text-words">A</span>
+					<span class="loading-text-words">D</span>
+					<span class="loading-text-words">I</span>
+					<span class="loading-text-words">N</span>
+					<span class="loading-text-words">G</span>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="button-go-top" data-fls-btntofirstsection="" data-fls-scrollto-header="" data-fls-scrollto=".main">
+			<svg width="20" height="12" viewbox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M9.00563 0.786881C9.55481 0.237706 10.4452 0.237706 10.9944 0.786881L19.4319 9.22438C19.981 9.77356 19.981 10.6639 19.4319 11.2131C18.8827 11.7623 17.9923 11.7623 17.4431 11.2131L10 3.76999L2.55687 11.2131C2.00769 11.7623 1.11731 11.7623 0.568131 11.2131C0.0189563 10.6639 0.0189563 9.77356 0.568131 9.22438L9.00563 0.786881Z" fill="#FA719A"></path>
+			</svg>
+		</a>
+		<div class="wrapper">
+			<header data-fls-header="" data-fls-header-scroll="" class="header">
+				<div class="header__wrapper">
+					<a href="/" class="header__logo">
+						<picture>
+							<source media="(max-width: 991.98px)" srcset="./assets/img/logo.svg">
+							<!-- <source media="(max-width: 1170.98px)" srcset="@img/logo-03.svg" > -->
+							<img src="./assets/img/logo.svg" alt="Logo">
+						</picture>
+					</a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="current-menu-item">
+									<a href="" data-fls-scrollto-header="" data-fls-scrollto="#about">
+										<span>About us</span>
+									</a>
+								</li>
+								<li>
+									<button type="button" class="btn-sublist --icon-02">
+										<span>Divisions</span>
+									</button>
+									<div class="menu__sublist">
+										<ul>
+											<li>
+												<a href="#" data-fls-scrollto-header="" data-fls-scrollto="#d-01">
+													<span>Blue Island
+											Security</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-fls-scrollto-header="" data-fls-scrollto="#d-02">
+													<span>Blue Island
+											Services</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-fls-scrollto-header="" data-fls-scrollto="#d-03">
+													<span>Blue Island
+											Search</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="" class="menu__link" data-fls-scrollto-header="" data-fls-scrollto="#solution">
+										<span>Solution
+								briefs</span>
+									</a>
+								</li>
+								<li>
+									<a href="" class="menu__link" data-fls-scrollto-header="" data-fls-scrollto="#why">
+										<span>Why choose
+								us</span>
+									</a>
+								</li>
+								<li>
+									<a href="" class="menu__link" data-fls-scrollto-header="" data-fls-scrollto="#methodology">
+										<span>Methodology</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link" data-fls-scrollto-header="" data-fls-scrollto="#partners">
+										<span>Partners</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link" data-fls-scrollto-header="" data-fls-scrollto="#news">
+										<span>News</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="/reports.html" class="menu__link" data-fls-scrollto-header="">
+										<span>Reports</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__actions">
+						<a href="#" class="header__link _button" data-fls-scrollto-header="" data-fls-scrollto="#contacts">
+							<span class="_button-text">Contact us</span>
+							<span class="icon-element">
+								<span class="--icon-01"></span>
+							</span>
+						</a>
+					</div>
+					<button type="button" class="menu__icon icon-menu" data-fls-menu="">
+						<span></span>
+					</button>
+					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
+				</div>
+			</header>
+			<main class="page single">
+				<div class="element-light">
+					<svg width="1888" height="1687" viewbox="0 0 1888 1687" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_2045_11)">
+							<path d="M1742.63 -1018.57C2020.51 -193.903 1888.11 895.758 1447.06 1415.23C1005.94 1934.68 423.2 1687.28 145.342 862.577C-132.481 37.7994 -0.117329 -1051.83 440.927 -1571.23C881.991 -2090.71 1464.83 -1843.24 1742.63 -1018.57Z" fill="url(#paint0_radial_2045_11)"></path>
+						</g>
+						<defs>
+							<radialGradient id="paint0_radial_2045_11" cx="0" cy="0" r="1" gradientunits="userSpaceOnUse" gradienttransform="translate(944 -78) rotate(90) scale(1765 944)">
+								<stop stop-color="#073A5E"></stop>
+								<stop offset="1" stop-color="#060C18" stop-opacity="0"></stop>
+							</radialGradient>
+							<clipPath id="clip0_2045_11">
+								<rect width="1888" height="1687" fill="white"></rect>
+							</clipPath>
+						</defs>
+					</svg>
+				</div>
+				<section class="single-main">
+					<div class="single-main__container">
+						<div class="single-main__object">
+							<div class="single-main__wrapper">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/single-600.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/single.webp">
+								</picture>
+								<div class="single-main__body" data-fls-dynamic=".single-main__container, 991.98, 0">
+									<div class="single-main__date">May 10, 2025</div>
+									<h1 class="single-main__title">
+										Navigating Cyber Complexity with Confidence: The Role of Expert
+							Advisory
+							Services
+									</h1>
+									<ul class="bread">
+										<li class="--icon-02">
+											<a href="">Home</a>
+										</li>
+										<li class="--icon-02">
+											<a href="">News</a>
+										</li>
+										<li class="--icon-02">
+											<a href="">The Evolution</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="single-main-info">
+					<div class="single-main-info__container">
+						<div class="single-main-info__object">
+							<h2 class="single-item__title">Outcome-Driven, Business-First</h2>
+							<div class="single-item__info">
+								<p>
+									We’ve helped government agencies, regional banks, utility providers, and local enterprises across
+						the Pacific Islands achieve measurable improvements in cyber posture—faster threat detection,
+						clearer reporting, and stronger executive alignment. And we do it without overengineering the
+						process.
+								</p>
+							</div>
+						</div>
+						<div class="single-main-info__object">
+							<h2 class="single-item__title">Outcome-Driven, Business-First</h2>
+							<div class="single-item__info">
+								<p>
+									We’ve helped government agencies, regional banks, utility providers, and local enterprises across
+						the Pacific Islands achieve measurable improvements in cyber posture—faster threat detection,
+						clearer reporting, and stronger executive alignment. And we do it without overengineering the
+						process.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="single-items">
+					<div class="line">
+						<span class="_to-right"></span>
+					</div>
+					<div class="single-item">
+						<div class="__container">
+							<div class="single-item__object">
+								<h2 class="single-item__title">Outcome-Driven, Business-First</h2>
+								<div class="single-item__info">
+									<p>
+										We’ve helped government agencies, regional banks, utility providers, and local enterprises across
+							the Pacific Islands achieve measurable improvements in cyber posture—faster threat detection,
+							clearer reporting, and stronger executive alignment. And we do it without overengineering the
+							process.
+									</p>
+									<p>
+										We’ve helped government agencies, regional banks, utility providers, and local enterprises across
+							the Pacific Islands achieve measurable improvements in cyber posture—faster threat detection,
+							clearer reporting, and stronger executive alignment. And we do it without overengineering the
+							process.
+									</p>
+									<p>
+										We’ve helped government agencies, regional banks, utility providers, and local enterprises across
+							the Pacific Islands achieve measurable improvements in cyber posture—faster threat detection,
+							clearer reporting, and stronger executive alignment. And we do it without overengineering the
+							process.
+									</p>
+								</div>
+							</div>
+							<div class="single-item__object">
+								<h2 class="single-item__title">Outcome-Driven, Business-First</h2>
+								<ul class="list-single">
+									<li>
+										<span></span>
+										Practical, risk-based recommendations
+									</li>
+									<li>
+										<span></span>
+										Practical, risk-based recommendations
+									</li>
+									<li>
+										<span></span>
+										Practical, risk-based recommendations
+									</li>
+									<li>
+										<span></span>
+										Practical, risk-based recommendations
+									</li>
+									<li>
+										<span></span>
+										Practical, risk-based recommendations
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="line">
+						<span></span>
+					</div>
+					<div class="single-item__object-list">
+						<div class="__container">
+							<h2 class="single-item__title">Outcome-Driven, Business-First</h2>
+							<ul class="list-single">
+								<li>
+									<span></span>
+									Practical, risk-based recommendations
+								</li>
+								<li>
+									<span></span>
+									Practical, risk-based recommendations
+								</li>
+								<li>
+									<span></span>
+									Practical, risk-based recommendations
+								</li>
+								<li>
+									<span></span>
+									Practical, risk-based recommendations
+								</li>
+								<li>
+									<span></span>
+									Practical, risk-based recommendations
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<div class="line">
+					<span class="_to-right"></span>
+				</div>
+				<section class="more">
+					<div class="bg-animation" data-fls-bganimation="">
+						<div id="stars"></div>
+						<div id="stars2"></div>
+						<div id="stars3"></div>
+						<div id="stars4"></div>
+					</div>
+					<div class="more__container">
+						<div class="more__title _title-02" data-fls-watcher-once="" data-fls-watcher="">Explore More Articles</div>
+						<div class="more__body">
+							<div class="carts" data-fls-watcher-once="" data-fls-watcher="">
+								<div class="cart" data-fls-watcher-once="" data-fls-watcher="">
+									<div class="cart__wrapper">
+										<div class="cart__picture">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/single-600.webp" type="image/webp">
+												<img alt="Image" src="./assets/img/single.webp">
+											</picture>
+										</div>
+										<div class="cart__body">
+											<span class="cart__date">May 10, 2025</span>
+											<h2 class="cart__title">The Evolution</h2>
+											<h4 class="cart__info">
+												Stay informed with the latest trends, expert tips, and threat analysis
+									from the world of cybersecurity. Empower your defense with knowledge.
+											</h4>
+											<div class="cart__action">
+												<a href="#" class="cart__link _link">Read More ></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cart" data-fls-watcher-once="" data-fls-watcher="">
+									<div class="cart__wrapper">
+										<div class="cart__picture">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/single-600.webp" type="image/webp">
+												<img alt="Image" src="./assets/img/single.webp">
+											</picture>
+										</div>
+										<div class="cart__body">
+											<span class="cart__date">May 10, 2025</span>
+											<h2 class="cart__title">The Evolution</h2>
+											<h4 class="cart__info">
+												Stay informed with the latest trends, expert tips, and threat analysis
+									from the world of cybersecurity. Empower your defense with knowledge.
+											</h4>
+											<div class="cart__action">
+												<a href="#" class="cart__link _link">Read More ></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cart" data-fls-watcher-once="" data-fls-watcher="">
+									<div class="cart__wrapper">
+										<div class="cart__picture">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/single-600.webp" type="image/webp">
+												<img alt="Image" src="./assets/img/single.webp">
+											</picture>
+										</div>
+										<div class="cart__body">
+											<span class="cart__date">May 10, 2025</span>
+											<h2 class="cart__title">The Evolution</h2>
+											<h4 class="cart__info">
+												Stay informed with the latest trends, expert tips, and threat analysis
+									from the world of cybersecurity. Empower your defense with knowledge.
+											</h4>
+											<div class="cart__action">
+												<a href="#" class="cart__link _link">Read More ></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="more__actions" data-fls-watcher-once="" data-fls-watcher="">
+								<a href="#" class="_button">
+									<span class="_button-text">Show more</span>
+									<span class="icon-element">
+										<span class="--icon-01"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="line">
+					<span></span>
+				</div>
+				<section class="contacts" data-fls-contacts="" id="contacts" data-fls-watcher="navigator">
+					<div class="grid-bg ba-grid anim">
+						<div class="inner"></div>
+					</div>
+					<div class="element-light">
+						<svg width="1888" height="1687" viewbox="0 0 1888 1687" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_2045_11)">
+								<path d="M1742.63 -1018.57C2020.51 -193.903 1888.11 895.758 1447.06 1415.23C1005.94 1934.68 423.2 1687.28 145.342 862.577C-132.481 37.7994 -0.117329 -1051.83 440.927 -1571.23C881.991 -2090.71 1464.83 -1843.24 1742.63 -1018.57Z" fill="url(#paint0_radial_2045_11)"></path>
+							</g>
+							<defs>
+								<radialGradient id="paint0_radial_2045_11" cx="0" cy="0" r="1" gradientunits="userSpaceOnUse" gradienttransform="translate(944 -78) rotate(90) scale(1765 944)">
+									<stop stop-color="#073A5E"></stop>
+									<stop offset="1" stop-color="#060C18" stop-opacity="0"></stop>
+								</radialGradient>
+								<clipPath id="clip0_2045_11">
+									<rect width="1888" height="1687" fill="white"></rect>
+								</clipPath>
+							</defs>
+						</svg>
+					</div>
+					<div class="contacts__container">
+						<div class="contacts__image" data-fls-watcher-once="" data-fls-watcher="">
+							<img src="./assets/img/contacts.svg" alt="Image">
+						</div>
+						<div class="contacts__wrapper">
+							<div class="contacts__info info-contacts">
+								<h2 class="info-contacts__title _title" data-fls-watcher-once="" data-fls-watcher="">Get in touch</h2>
+								<div class="info-contacts__info _text">
+									<p data-fls-watcher-once="" data-fls-watcher="">
+										Do you have questions, suggestions, or want to discuss how we
+						can help
+						protect your business?
+									</p>
+									<p data-fls-watcher-once="" data-fls-watcher="">
+										We’re always ready to talk. Please fill out the form below and
+						our team
+						will get back to you shortly.
+									</p>
+								</div>
+								<div class="info-contacts__items">
+									<a href="#" class="info-contacts__item item-info-contacts" data-fls-watcher-once="" data-fls-watcher="">
+										<div class="item-info-contacts__icon">
+											<span>
+												<svg width="28" height="23" viewbox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M26.2144 16.0681C26.2144 18.6209 24.1379 20.6942 21.5884 20.6942H6.41108C3.86156 20.6942 1.78497 18.6208 1.78497 16.0681V6.41102C1.78497 5.55903 2.01825 4.75883 2.42316 4.07205L9.82875 11.4776C10.9367 12.5888 12.4204 13.2011 14.0013 13.2011C15.579 13.2011 17.0626 12.5888 18.1706 11.4776L25.5762 4.07205C25.9811 4.75883 26.2144 5.55897 26.2144 6.41102V16.0681H26.2144ZM21.5883 1.78497H6.41108C5.35823 1.78497 4.38633 2.1413 3.60886 2.73414L11.089 10.2175C11.8632 10.9885 12.8966 11.4161 14.0013 11.4161C15.1027 11.4161 16.1361 10.9885 16.9104 10.2175L24.3905 2.73414C23.6131 2.1413 22.6412 1.78497 21.5883 1.78497ZM21.5883 0H6.41108C2.87673 0 0 2.87673 0 6.41108V16.0682C0 19.6058 2.87673 22.4793 6.41108 22.4793H21.5883C25.1227 22.4793 27.9994 19.6058 27.9994 16.0682V6.41102C27.9994 2.87667 25.1227 0 21.5883 0Z" fill="url(#paint0_linear_526_789)"></path>
+													<defs>
+														<linearGradient id="paint0_linear_526_789" x1="1.91171" y1="-1.17298" x2="27.4948" y2="46.1851" gradientunits="userSpaceOnUse">
+															<stop stop-color="#47ACF1"></stop>
+															<stop offset="1" stop-color="#E2FFFD"></stop>
+														</linearGradient>
+													</defs>
+												</svg>
+											</span>
+										</div>
+										<div class="item-info-contacts__body">
+											<div class="item-info-contacts__key">Email us</div>
+											<div class="item-info-contacts__value">info@blueislandsecurity.com</div>
+										</div>
+									</a>
+									<a href="#" class="info-contacts__item item-info-contacts" data-fls-watcher-once="" data-fls-watcher="">
+										<div class="item-info-contacts__icon">
+											<span>
+												<svg width="28" height="34" viewbox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M23.8983 4.10032C21.2543 1.45618 17.7387 0 13.9994 0C10.26 0 6.74439 1.45618 4.10032 4.10032C1.45618 6.74452 0 10.26 0 13.9993C0 21.5638 7.15244 27.8556 10.995 31.2357C11.529 31.7055 11.9901 32.1111 12.3575 32.4543C12.8178 32.8842 13.4086 33.0993 13.9993 33.0993C14.5901 33.0993 15.1808 32.8842 15.6411 32.4543C16.0085 32.1111 16.4697 31.7055 17.0036 31.2357C20.8462 27.8555 27.9987 21.5638 27.9987 13.9993C27.9986 10.26 26.5425 6.74452 23.8983 4.10032ZM15.723 29.78C15.1773 30.26 14.7061 30.6746 14.3176 31.0375C14.1391 31.2041 13.8595 31.2041 13.681 31.0375C13.2925 30.6745 12.8212 30.26 12.2755 29.7799C8.66305 26.6022 1.93877 20.6871 1.93877 13.9994C1.93877 7.34923 7.34903 1.93896 13.9992 1.93896C20.6494 1.93896 26.0596 7.34923 26.0596 13.9994C26.0597 20.6871 19.3355 26.6022 15.723 29.78Z" fill="url(#paint0_linear_526_799)"></path>
+													<path d="M13.9994 7.30078C10.5976 7.30078 7.83008 10.0683 7.83008 13.4701C7.83008 16.8719 10.5976 19.6394 13.9994 19.6394C17.4012 19.6394 20.1687 16.8719 20.1687 13.4701C20.1687 10.0683 17.4012 7.30078 13.9994 7.30078ZM13.9994 17.7004C11.6668 17.7004 9.76898 15.8026 9.76898 13.47C9.76898 11.1374 11.6668 9.23962 13.9994 9.23962C16.3321 9.23962 18.2298 11.1374 18.2298 13.47C18.2298 15.8026 16.3321 17.7004 13.9994 17.7004Z" fill="url(#paint1_linear_526_799)"></path>
+													<defs>
+														<linearGradient id="paint0_linear_526_799" x1="1.91166" y1="-1.72713" x2="45.7977" y2="53.4451" gradientunits="userSpaceOnUse">
+															<stop stop-color="#47ACF1"></stop>
+															<stop offset="1" stop-color="#E2FFFD"></stop>
+														</linearGradient>
+														<linearGradient id="paint1_linear_526_799" x1="8.67252" y1="6.65695" x2="24.2256" y2="29.7719" gradientunits="userSpaceOnUse">
+															<stop stop-color="#47ACF1"></stop>
+															<stop offset="1" stop-color="#E2FFFD"></stop>
+														</linearGradient>
+													</defs>
+												</svg>
+											</span>
+										</div>
+										<div class="item-info-contacts__body">
+											<div class="item-info-contacts__key">Our location</div>
+											<div class="item-info-contacts__value">
+												160 Robinson Road, #14-04 Singapore Business
+								Federation Center, Singapore (068914)
+											</div>
+										</div>
+									</a>
+									<a href="#" class="info-contacts__item item-info-contacts" data-fls-watcher-once="" data-fls-watcher="">
+										<div class="item-info-contacts__icon">
+											<span>
+												<svg width="29" height="28" viewbox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M6.58977 9.00391H0.359375V27.7139H6.58977V9.00391Z" fill="url(#paint0_linear_526_807)"></path>
+													<path d="M27.0367 10.7154C25.7279 9.28672 23.9969 8.57227 21.8448 8.57227C21.0518 8.57227 20.331 8.66981 19.6827 8.86502C19.0346 9.0601 18.4872 9.33381 18.0402 9.68627C17.5935 10.0387 17.2377 10.3659 16.9736 10.6679C16.7225 10.9547 16.4768 11.2888 16.2372 11.6667V9.0062H10.0254L10.0444 9.91256C10.0572 10.5169 10.0635 12.3796 10.0635 15.501C10.0635 18.6226 10.0509 22.6943 10.0257 27.7164H16.2372V17.2755C16.2372 16.6338 16.306 16.1241 16.4448 15.7462C16.7093 15.1039 17.1085 14.5662 17.6438 14.1322C18.1789 13.6976 18.8427 13.4805 19.6359 13.4805C20.718 13.4805 21.5144 13.8549 22.0243 14.6038C22.5339 15.3526 22.7888 16.388 22.7888 17.7096V27.7158H29.0003V16.9926C28.9999 14.2359 28.3458 12.1436 27.0367 10.7154Z" fill="url(#paint1_linear_526_807)"></path>
+													<path d="M3.51164 0C2.46707 0 1.62068 0.305449 0.972292 0.915752C0.323965 1.52619 0 2.29685 0 3.22847C0 4.14707 0.314641 4.91509 0.943989 5.53167C1.57314 6.14832 2.40398 6.45682 3.43605 6.45682H3.47381C4.53121 6.45682 5.38407 6.14859 6.0322 5.53167C6.68033 4.91509 6.99808 4.14733 6.98558 3.22847C6.97302 2.29692 6.65183 1.52619 6.02268 0.915752C5.3936 0.305184 4.55627 0 3.51164 0Z" fill="url(#paint2_linear_526_807)"></path>
+													<defs>
+														<linearGradient id="paint0_linear_526_807" x1="0.784767" y1="8.02761" x2="21.0271" y2="18.0456" gradientunits="userSpaceOnUse">
+															<stop stop-color="#47ACF1"></stop>
+															<stop offset="1" stop-color="#E2FFFD"></stop>
+														</linearGradient>
+														<linearGradient id="paint1_linear_526_807" x1="11.3209" y1="7.57332" x2="35.5326" y2="43.2385" gradientunits="userSpaceOnUse">
+															<stop stop-color="#47ACF1"></stop>
+															<stop offset="1" stop-color="#E2FFFD"></stop>
+														</linearGradient>
+														<linearGradient id="paint2_linear_526_807" x1="0.476978" y1="-0.336919" x2="8.35743" y2="12.3347" gradientunits="userSpaceOnUse">
+															<stop stop-color="#47ACF1"></stop>
+															<stop offset="1" stop-color="#E2FFFD"></stop>
+														</linearGradient>
+													</defs>
+												</svg>
+											</span>
+										</div>
+										<div class="item-info-contacts__body">
+											<div class="item-info-contacts__key">LinkedIn</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<form action="#" class="contacts__form form-contacts" data-fls-form="dev" data-fls-form-popup="form-back-popup">
+								<div class="bt-spinner"></div>
+								<div class="form-contacts__item" data-fls-watcher-once="" data-fls-watcher="">
+									<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Name" class="input" required>
+								</div>
+								<div class="form-contacts__item" data-fls-watcher-once="" data-fls-watcher="">
+									<input data-fls-input="" autocomplete="off" type="email" name="form[]" data-error="Помилка" placeholder="Email" class="input" required>
+								</div>
+								<div class="select__box" data-fls-watcher-once="" data-fls-watcher="">
+									<select name="form[]" data-fls-select="" data-fls-select-modif="form">
+										<option value="" selected>Inquiry Type:</option>
+										<option value="2">General</option>
+										<option value="3">Servies</option>
+										<option value="4">Security</option>
+										<option value="5">Search</option>
+									</select>
+								</div>
+								<div class="form-contacts__item" data-fls-watcher-once="" data-fls-watcher="">
+									<textarea data-fls-input="" autocomplete="off" name="form[]" placeholder="Message" data-error="Помилка" class="input"></textarea>
+								</div>
+								<div class="form-contacts__actions" data-fls-watcher-once="" data-fls-watcher="">
+									<button type="submit" class="_button">
+										<span class="_button-text">Submit</span>
+										<span class="icon-element">
+											<span class="--icon-01"></span>
+										</span>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer data-fls-footer="" class="footer" data-fls-watcher="" data-fls-watcher-once="">
+				<div class="line">
+					<span></span>
+				</div>
+				<div class="footer__wrapper">
+					<div class="footer__top top-footer">
+						<a href="" class="footer__logo">
+							<img src="./assets/img/logo.svg" alt="Footer logo">
+						</a>
+						<nav>
+							<ul>
+								<li>
+									<a href="#" data-fls-scrollto-header="" data-fls-scrollto="#about">About us</a>
+								</li>
+								<li>
+									<a href="#" data-fls-scrollto-header="" data-fls-scrollto="#solution">Solution briefs</a>
+								</li>
+								<li>
+									<a href="#" data-fls-scrollto-header="" data-fls-scrollto="#why">Why choose us</a>
+								</li>
+								<li>
+									<a href="#" data-fls-scrollto-header="" data-fls-scrollto="#methodology">Methodology</a>
+								</li>
+								<li>
+									<a href="#" data-fls-scrollto-header="" data-fls-scrollto="#partners">Partners</a>
+								</li>
+								<li>
+									<a href="#" data-fls-scrollto-header="" data-fls-scrollto="#news">News</a>
+								</li>
+							</ul>
+							<ul class="footer__services services-footer">
+								<li>
+									<a href="">Blue Island Security</a>
+								</li>
+								<li>
+									<a href="">Blue Island Services</a>
+								</li>
+								<li>
+									<a href="">Blue Island Search</a>
+								</li>
+							</ul>
+						</nav>
+						<ul class="social">
+							<li>
+								<a href="#" class="">
+									<span>
+										<svg width="17" height="14" viewbox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M15.7286 9.64088C15.7286 11.1725 14.4827 12.4165 12.953 12.4165H3.84664C2.31694 12.4165 1.07098 11.1725 1.07098 9.64088V3.84661C1.07098 3.33542 1.21095 2.8553 1.4539 2.44323L5.89725 6.88658C6.56201 7.55329 7.45222 7.92065 8.40077 7.92065C9.34738 7.92065 10.2376 7.55329 10.9023 6.88658L15.3457 2.44323C15.5887 2.8553 15.7286 3.33538 15.7286 3.84661V9.64088H15.7286ZM12.953 1.07098H3.84664C3.21494 1.07098 2.6318 1.28478 2.16531 1.64049L6.65337 6.13049C7.11794 6.59308 7.73796 6.84967 8.40077 6.84967C9.06164 6.84967 9.68169 6.59308 10.1462 6.13049L14.6343 1.64049C14.1678 1.28478 13.5847 1.07098 12.953 1.07098ZM12.953 0H3.84664C1.72604 0 0 1.72604 0 3.84665V9.64091C0 11.7635 1.72604 13.4876 3.84664 13.4876H12.953C15.0736 13.4876 16.7996 11.7635 16.7996 9.64091V3.84661C16.7996 1.726 15.0736 0 12.953 0Z" fill="url(#paint0_linear_2025_13)"></path>
+											<defs>
+												<linearGradient id="paint0_linear_2025_13" x1="1.14703" y1="-0.703787" x2="16.4969" y2="27.7111" gradientunits="userSpaceOnUse">
+													<stop stop-color="#47ACF1"></stop>
+													<stop offset="1" stop-color="#E2FFFD"></stop>
+												</linearGradient>
+											</defs>
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>
+										<svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10.7032 7.80162L16.1785 0.599609H14.5926L9.91049 6.75874L5.2279 0.599609H0L7.29629 10.1971L1.82049 17.3996H3.40642L8.08901 11.24L12.7721 17.3996H18L10.7032 7.80162ZM2.57807 1.90512H4.6341L15.4214 16.094H13.3654L2.57807 1.90512Z" fill="url(#paint0_linear_855_782)"></path>
+											<defs>
+												<linearGradient id="paint0_linear_855_782" x1="1.22898" y1="-0.277022" x2="21.8211" y2="32.5129" gradientunits="userSpaceOnUse">
+													<stop stop-color="#47ACF1"></stop>
+													<stop offset="1" stop-color="#E2FFFD"></stop>
+												</linearGradient>
+											</defs>
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>
+										<svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M4.55464 6.00195H0.816406V17.2279H4.55464V6.00195Z" fill="url(#paint0_linear_855_785)"></path>
+											<path d="M16.822 7.03C16.0368 6.17281 14.9982 5.74414 13.7069 5.74414C13.2311 5.74414 12.7986 5.80266 12.4096 5.91979C12.0207 6.03684 11.6923 6.20106 11.4241 6.41254C11.1561 6.62402 10.9426 6.82035 10.7842 7.00151C10.6335 7.17359 10.4861 7.37404 10.3423 7.6008V6.0045H6.61523L6.62666 6.54832C6.63432 6.91093 6.63809 8.02856 6.63809 9.90137C6.63809 11.7743 6.63055 14.2173 6.61539 17.2306H10.3423V10.9661C10.3423 10.581 10.3836 10.2752 10.4669 10.0485C10.6256 9.66315 10.8651 9.34053 11.1863 9.08009C11.5074 8.81933 11.9056 8.68907 12.3815 8.68907C13.0308 8.68907 13.5086 8.91372 13.8146 9.36307C14.1204 9.81237 14.2733 10.4336 14.2733 11.2265V17.2303H18.0002V10.7964C17.9999 9.1423 17.6075 7.88691 16.822 7.03Z" fill="url(#paint1_linear_855_785)"></path>
+											<path d="M2.70659 0.599609C2.07985 0.599609 1.57202 0.782879 1.18298 1.14906C0.793988 1.51532 0.599609 1.97772 0.599609 2.53669C0.599609 3.08785 0.788394 3.54866 1.166 3.91861C1.54349 4.2886 2.042 4.4737 2.66124 4.4737H2.6839C3.31834 4.4737 3.83005 4.28876 4.21893 3.91861C4.60781 3.54866 4.79846 3.08801 4.79096 2.53669C4.78342 1.97776 4.59071 1.51532 4.21322 1.14906C3.83577 0.78272 3.33337 0.599609 2.70659 0.599609Z" fill="url(#paint2_linear_855_785)"></path>
+											<defs>
+												<linearGradient id="paint0_linear_855_785" x1="1.07164" y1="5.41618" x2="13.2171" y2="11.427" gradientunits="userSpaceOnUse">
+													<stop stop-color="#47ACF1"></stop>
+													<stop offset="1" stop-color="#E2FFFD"></stop>
+												</linearGradient>
+												<linearGradient id="paint1_linear_855_785" x1="7.39256" y1="5.14477" x2="21.9196" y2="26.5439" gradientunits="userSpaceOnUse">
+													<stop stop-color="#47ACF1"></stop>
+													<stop offset="1" stop-color="#E2FFFD"></stop>
+												</linearGradient>
+												<linearGradient id="paint2_linear_855_785" x1="0.885796" y1="0.397458" x2="5.61407" y2="8.00044" gradientunits="userSpaceOnUse">
+													<stop stop-color="#47ACF1"></stop>
+													<stop offset="1" stop-color="#E2FFFD"></stop>
+												</linearGradient>
+											</defs>
+										</svg>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__bottom bottom-footer">
+						<p>© 2025 Blue Island Security. All rights reserved.</p>
+						<nav>
+							<ul>
+								<li>
+									<a href="#">Privacy Policy</a>
+								</li>
+								<li>
+									<a href="#">Terms of Use</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div data-fls-popup="popup-01" aria-hidden="true" class="popup popup-info">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.47564 14.7688L1.41678 14.8228C1.1096 15.0759 0.656026 15.0579 0.369634 14.7688C0.0832416 14.4797 0.0654538 14.0219 0.31617 13.7118L0.369634 13.6524L13.6649 0.231517C13.9703 -0.0767818 14.4655 -0.0767818 14.7709 0.231517C15.0764 0.539816 15.0764 1.03967 14.7709 1.34797L1.47564 14.7688Z" fill="#A7D3FF"></path>
+							<path d="M0.229034 1.34765L0.17557 1.28823C-0.0751463 0.978147 -0.0573584 0.520293 0.229034 0.231196C0.515426 -0.0579 0.968998 -0.0758558 1.27618 0.177227L1.33504 0.231196L14.6303 13.652C14.9358 13.9603 14.9358 14.4602 14.6303 14.7685C14.3249 15.0768 13.8297 15.0768 13.5243 14.7685L0.229034 1.34765Z" fill="#A7D3FF"></path>
+						</svg>
+					</button>
+					<div data-fls-popup-content="" class="popup-info__body">
+						<div class="popup-info__top">
+							<div class="popup-info__uptitle">Ransomware Attacks</div>
+							<div class="popup-info__title">Ransomware Assessment</div>
+							<div class="popup-info__subtitle">Strengthen Your Defences Against</div>
+							<div class="popup-info__info">
+								<p>
+									Ransomware has evolved to become more sophisticated and destructive. Modern attacks not only encrypt data but also exfiltrate valuable information, posing a dual threat to organizations.
+								</p>
+								<p>
+									With ransomware gangs targeting businesses of all sizes, it's crucial to understand and fortify your defences. This is why Blue Island Security has developed a rapid, comprehensive Attack Surface Assessment to identify your external assets, key gaps and vulnerabilities with 25 unique ransomware testing scenarios.
+								</p>
+							</div>
+							<div class="popup-info__action">
+								<a href="#" download="">
+									Download PDF
+									<svg width="17" height="18" viewbox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.2222 17.5H3.77777C2.76875 17.5 1.82008 17.107 1.1065 16.3935C0.392963 15.68 0 14.7313 0 13.7222V12.7777C0 12.2561 0.42282 11.8332 0.94445 11.8332C1.46608 11.8332 1.8889 12.2561 1.8889 12.7777V13.7222C1.8889 14.2267 2.0854 14.7011 2.4421 15.0578C2.79891 15.4146 3.27323 15.6111 3.77777 15.6111H13.2222C13.7267 15.6111 14.201 15.4146 14.5578 15.0578C14.9146 14.701 15.1111 14.2267 15.1111 13.7222V12.7777C15.1111 12.2561 15.5339 11.8332 16.0555 11.8332C16.5771 11.8332 17 12.2561 17 12.7777V13.7222C17 14.7312 16.607 15.6799 15.8935 16.3935C15.1799 17.107 14.2312 17.5 13.2222 17.5ZM8.49998 13.7222C8.36934 13.7222 8.24496 13.6956 8.1318 13.6477C8.02622 13.6031 7.92702 13.5383 7.84022 13.4535C7.84018 13.4535 7.84018 13.4535 7.84015 13.4535C7.83952 13.4529 7.8389 13.4523 7.83827 13.4516C7.83811 13.4515 7.83791 13.4513 7.83774 13.4511C7.83721 13.4506 7.83675 13.4502 7.83626 13.4497C7.83593 13.4493 7.83563 13.4491 7.8353 13.4487C7.83497 13.4484 7.83454 13.4479 7.83425 13.4477C7.83359 13.447 7.83286 13.4463 7.8322 13.4456L4.0544 9.6678C3.68559 9.29899 3.68559 8.70098 4.0544 8.33213C4.42321 7.96332 5.02125 7.96329 5.39006 8.33213L7.55557 10.4976V1.44445C7.55553 0.92282 7.97835 0.5 8.49998 0.5C9.02161 0.5 9.44447 0.92282 9.44447 1.44445V10.4976L11.6099 8.33213C11.9787 7.96332 12.5768 7.96332 12.9456 8.33213C13.3144 8.70095 13.3144 9.29899 12.9456 9.6678L9.1678 13.4456C9.16714 13.4462 9.16641 13.4469 9.16575 13.4476C9.16539 13.4479 9.16499 13.4484 9.1647 13.4486C9.16437 13.449 9.16407 13.4493 9.16374 13.4496C9.16328 13.4501 9.16275 13.4506 9.16229 13.451C9.16212 13.4512 9.16189 13.4514 9.16173 13.4516C9.16113 13.4522 9.16051 13.4528 9.15988 13.4534C9.15985 13.4534 9.15985 13.4535 9.15981 13.4535C9.14942 13.4636 9.1389 13.4734 9.12814 13.483C9.04906 13.5535 8.96097 13.6085 8.86784 13.6478C8.86751 13.6479 8.86724 13.6481 8.86691 13.6482C8.86655 13.6483 8.86625 13.6485 8.86589 13.6486C8.75333 13.696 8.62974 13.7222 8.49998 13.7222Z" fill="#9CCDFE"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="line">
+							<span class="_to-right"></span>
+						</div>
+						<div class="popup-info__content">
+							<div class="popup-info__one one-popup-info">
+								<div class="one-popup-info__item">
+									<div class="one-popup-info__title">Key Features</div>
+									<div class="one-popup-info__items">
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/01.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">Comprehensive simulation of ransomware & crypto mining scenarios</div>
+										</div>
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/02.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">In-depth analysis of your network's vulnerabilities to ransomware attacks</div>
+										</div>
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/03.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">Thorough assessment of data exfiltration risks & employee susceptibility</div>
+										</div>
+									</div>
+								</div>
+								<div class="one-popup-info__item">
+									<div class="one-popup-info__title">Outcome</div>
+									<div class="one-popup-info__items">
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/04.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">
+												Harden your org. against ransomware attacks & gain full insight into your vulnerabilities
+											</div>
+										</div>
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/05.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">
+												Develop a comprehensive ransomware defence strategy based on real-world scenarios
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="line">
+								<span></span>
+							</div>
+							<div class="poup-info__two two-popup-info">
+								<div class="two-popup-info__title">Identify & fix critical ransomware gaps before they cause harm…</div>
+								<div class="two-popup-info__info">
+									<p>
+										Blue Island Security's Ransomware Assessment Service delivers indepth security analytics with full ransomware exploit simulation and assessment across your environment. We validate critical exposures to prevent potential exploitation.
+									</p>
+									<p>
+										Our comprehensive assessment will quickly highlight & prioritize any previously unknown security gaps, misconfigurations and threats across your environment.
+									</p>
+								</div>
+							</div>
+							<div class="line">
+								<span class="_to-right"></span>
+							</div>
+							<div class="poup-info__two two-popup-info">
+								<div class="two-popup-info__title">Rapid Insights & Ransomware Assessment</div>
+								<div class="two-popup-info__info">
+									<p>
+										Blue Island Security's Ransomware Assessment Service utilizes powerful tools to quickly discover and build a complete picture of your enterprise security posture against ransomware and data exfiltration, providing timely, actionable insights
+									</p>
+								</div>
+							</div>
+							<div class="poup-info__three three-popup-info">
+								<div class="three-popup-info__title">What we’ll do</div>
+								<div class="three-popup-info__items">
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">1</div>
+										<div class="item-three-popup-info__text">Rapid simulation of ransomware and crypto mining attack scenarios</div>
+									</div>
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">2</div>
+										<div class="item-three-popup-info__text">Thorough assessment of data exfiltration risks & 25 scenarios</div>
+									</div>
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">3</div>
+										<div class="item-three-popup-info__text">Analysis of employee susceptibility to social engineering attacks</div>
+									</div>
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">4</div>
+										<div class="item-three-popup-info__text">Comprehensive report with prioritized findings & remediation guidance</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-info__actions">
+								<div class="line">
+									<span></span>
+								</div>
+								<a href="#" class="_button">
+									<span class="_button-text">Let`s talk</span>
+									<span class="icon-element">
+										<span class="--icon-01"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-fls-popup="popup-02" aria-hidden="true" class="popup popup-info">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+							<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+						</svg>
+					</button>
+					<div data-fls-popup-content="" class="popup-info__body">
+						<div class="popup-info__top">
+							<div class="popup-info__uptitle">Surface & Vulnerabilities</div>
+							<div class="popup-info__title">Attack Surface Assessment</div>
+							<div class="popup-info__subtitle">Discover & Assess Your Unknown Attack</div>
+							<div class="popup-info__info">
+								<p>
+									Vulnerable infrastructure is a major challenge for organizations, with over 20,000 new vulnerabilities disclosed annually, and exposed infrastructure responsible for 60% of breaches.
+								</p>
+								<p>
+									With the proliferation of Ransomware and sophisticated attacks it’s never been more critical to harden your organization against external attackers.
+								</p>
+								<p>
+									This is why Blue Island Security has developed a rapid, comprehensive Attack Surface Assessment to identify your external assets, key gaps and vulnerabilities
+								</p>
+							</div>
+							<div class="popup-info__action">
+								<a href="#" download="">
+									Download PDF
+									<svg width="17" height="18" viewbox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.2222 17.5H3.77777C2.76875 17.5 1.82008 17.107 1.1065 16.3935C0.392963 15.68 0 14.7313 0 13.7222V12.7777C0 12.2561 0.42282 11.8332 0.94445 11.8332C1.46608 11.8332 1.8889 12.2561 1.8889 12.7777V13.7222C1.8889 14.2267 2.0854 14.7011 2.4421 15.0578C2.79891 15.4146 3.27323 15.6111 3.77777 15.6111H13.2222C13.7267 15.6111 14.201 15.4146 14.5578 15.0578C14.9146 14.701 15.1111 14.2267 15.1111 13.7222V12.7777C15.1111 12.2561 15.5339 11.8332 16.0555 11.8332C16.5771 11.8332 17 12.2561 17 12.7777V13.7222C17 14.7312 16.607 15.6799 15.8935 16.3935C15.1799 17.107 14.2312 17.5 13.2222 17.5ZM8.49998 13.7222C8.36934 13.7222 8.24496 13.6956 8.1318 13.6477C8.02622 13.6031 7.92702 13.5383 7.84022 13.4535C7.84018 13.4535 7.84018 13.4535 7.84015 13.4535C7.83952 13.4529 7.8389 13.4523 7.83827 13.4516C7.83811 13.4515 7.83791 13.4513 7.83774 13.4511C7.83721 13.4506 7.83675 13.4502 7.83626 13.4497C7.83593 13.4493 7.83563 13.4491 7.8353 13.4487C7.83497 13.4484 7.83454 13.4479 7.83425 13.4477C7.83359 13.447 7.83286 13.4463 7.8322 13.4456L4.0544 9.6678C3.68559 9.29899 3.68559 8.70098 4.0544 8.33213C4.42321 7.96332 5.02125 7.96329 5.39006 8.33213L7.55557 10.4976V1.44445C7.55553 0.92282 7.97835 0.5 8.49998 0.5C9.02161 0.5 9.44447 0.92282 9.44447 1.44445V10.4976L11.6099 8.33213C11.9787 7.96332 12.5768 7.96332 12.9456 8.33213C13.3144 8.70095 13.3144 9.29899 12.9456 9.6678L9.1678 13.4456C9.16714 13.4462 9.16641 13.4469 9.16575 13.4476C9.16539 13.4479 9.16499 13.4484 9.1647 13.4486C9.16437 13.449 9.16407 13.4493 9.16374 13.4496C9.16328 13.4501 9.16275 13.4506 9.16229 13.451C9.16212 13.4512 9.16189 13.4514 9.16173 13.4516C9.16113 13.4522 9.16051 13.4528 9.15988 13.4534C9.15985 13.4534 9.15985 13.4535 9.15981 13.4535C9.14942 13.4636 9.1389 13.4734 9.12814 13.483C9.04906 13.5535 8.96097 13.6085 8.86784 13.6478C8.86751 13.6479 8.86724 13.6481 8.86691 13.6482C8.86655 13.6483 8.86625 13.6485 8.86589 13.6486C8.75333 13.696 8.62974 13.7222 8.49998 13.7222Z" fill="#9CCDFE"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="line">
+							<span class="_to-right"></span>
+						</div>
+						<div class="popup-info__content">
+							<div class="popup-info__one one-popup-info">
+								<div class="one-popup-info__item">
+									<div class="one-popup-info__title">Key Features</div>
+									<div class="one-popup-info__items">
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/01.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">
+												Comprehensive discovery of your complete attack surface & internet connected assets
+											</div>
+										</div>
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/02.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">Reveal critical exposures on publicly connected devices & Infrastructure</div>
+										</div>
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/03.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">Rapidly assess key vulnerabilities & prioritise key remediation.</div>
+										</div>
+									</div>
+								</div>
+								<div class="one-popup-info__item">
+									<div class="one-popup-info__title">Outcome</div>
+									<div class="one-popup-info__items">
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/04.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">
+												Harden your organization to attacks & gain a full insight into your attack surface
+											</div>
+										</div>
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/05.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">Develop joint plans & next steps for continuous Attack Surface Management</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="line">
+								<span></span>
+							</div>
+							<div class="poup-info__two two-popup-info">
+								<div class="two-popup-info__title">Identify & fix critical vulnerabilities before they cause harm…</div>
+								<div class="two-popup-info__info">
+									<p>
+										The Blue Island Attack Surface Assessment delivers in-depth security analytics with full external asset discovery and Vulnerability Assessment across your environment. We will validate critical and high exposures to validate exploitability.
+									</p>
+									<p>
+										Our comprehensive assessment will quickly highlight & prioritize any previously unknown security gaps, misconfigurations and threats across your environment.
+									</p>
+								</div>
+							</div>
+							<div class="line">
+								<span class="_to-right"></span>
+							</div>
+							<div class="poup-info__two two-popup-info">
+								<div class="two-popup-info__title">Rapid Discovery & Vulnerability Assessment</div>
+								<div class="two-popup-info__info">
+									<p>
+										Blue Island Security’s Attack Surface Assessment will quickly discover and build a complete picture of your enterprise security posture providing timely, actionable insights:
+									</p>
+								</div>
+							</div>
+							<div class="poup-info__three three-popup-info">
+								<div class="three-popup-info__title">What we’ll do</div>
+								<div class="three-popup-info__items">
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">1</div>
+										<div class="item-three-popup-info__text">Rapid discovery of all know & Unknown external assets</div>
+									</div>
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">2</div>
+										<div class="item-three-popup-info__text">Index all known & discovered assets for comprehensive testing</div>
+									</div>
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">3</div>
+										<div class="item-three-popup-info__text">Assess & Prioritize all vulnerabilities against the latest intelligence</div>
+									</div>
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">4</div>
+										<div class="item-three-popup-info__text">Comprehensive report with prioritized findings & remediation guidance</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-info__actions">
+								<div class="line">
+									<span></span>
+								</div>
+								<a href="#" class="_button">
+									<span class="_button-text">Let`s talk</span>
+									<span class="icon-element">
+										<span class="--icon-01"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-fls-popup="popup-03" aria-hidden="true" class="popup popup-info">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+							<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+						</svg>
+					</button>
+					<div data-fls-popup-content="" class="popup-info__body">
+						<div class="popup-info__top">
+							<div class="popup-info__uptitle">Surface & Vulnerabilities</div>
+							<div class="popup-info__title">Digital Identity Assessment</div>
+							<div class="popup-info__subtitle">Discover & Assess the status of your Identities</div>
+							<div class="popup-info__info">
+								<p>
+									In 2023, exploiting valid accounts became the most common entry point for attackers, accounting for 30% of all incidents
+								</p>
+								<p>
+									With AI enabling threat actors to deliver sophisticated phishing and social engineering attacks, it has never been more critical to identify and secure your digital identities.
+								</p>
+								<p>
+									Blue Island Security leverages years of experience to conduct our Digital Identity Assessment (DIA). This assessment identifies key vulnerabilities and provides a prioritized action plan to enhance your security posture.
+								</p>
+							</div>
+							<div class="popup-info__action">
+								<a href="#" download="">
+									Download PDF
+									<svg width="17" height="18" viewbox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.2222 17.5H3.77777C2.76875 17.5 1.82008 17.107 1.1065 16.3935C0.392963 15.68 0 14.7313 0 13.7222V12.7777C0 12.2561 0.42282 11.8332 0.94445 11.8332C1.46608 11.8332 1.8889 12.2561 1.8889 12.7777V13.7222C1.8889 14.2267 2.0854 14.7011 2.4421 15.0578C2.79891 15.4146 3.27323 15.6111 3.77777 15.6111H13.2222C13.7267 15.6111 14.201 15.4146 14.5578 15.0578C14.9146 14.701 15.1111 14.2267 15.1111 13.7222V12.7777C15.1111 12.2561 15.5339 11.8332 16.0555 11.8332C16.5771 11.8332 17 12.2561 17 12.7777V13.7222C17 14.7312 16.607 15.6799 15.8935 16.3935C15.1799 17.107 14.2312 17.5 13.2222 17.5ZM8.49998 13.7222C8.36934 13.7222 8.24496 13.6956 8.1318 13.6477C8.02622 13.6031 7.92702 13.5383 7.84022 13.4535C7.84018 13.4535 7.84018 13.4535 7.84015 13.4535C7.83952 13.4529 7.8389 13.4523 7.83827 13.4516C7.83811 13.4515 7.83791 13.4513 7.83774 13.4511C7.83721 13.4506 7.83675 13.4502 7.83626 13.4497C7.83593 13.4493 7.83563 13.4491 7.8353 13.4487C7.83497 13.4484 7.83454 13.4479 7.83425 13.4477C7.83359 13.447 7.83286 13.4463 7.8322 13.4456L4.0544 9.6678C3.68559 9.29899 3.68559 8.70098 4.0544 8.33213C4.42321 7.96332 5.02125 7.96329 5.39006 8.33213L7.55557 10.4976V1.44445C7.55553 0.92282 7.97835 0.5 8.49998 0.5C9.02161 0.5 9.44447 0.92282 9.44447 1.44445V10.4976L11.6099 8.33213C11.9787 7.96332 12.5768 7.96332 12.9456 8.33213C13.3144 8.70095 13.3144 9.29899 12.9456 9.6678L9.1678 13.4456C9.16714 13.4462 9.16641 13.4469 9.16575 13.4476C9.16539 13.4479 9.16499 13.4484 9.1647 13.4486C9.16437 13.449 9.16407 13.4493 9.16374 13.4496C9.16328 13.4501 9.16275 13.4506 9.16229 13.451C9.16212 13.4512 9.16189 13.4514 9.16173 13.4516C9.16113 13.4522 9.16051 13.4528 9.15988 13.4534C9.15985 13.4534 9.15985 13.4535 9.15981 13.4535C9.14942 13.4636 9.1389 13.4734 9.12814 13.483C9.04906 13.5535 8.96097 13.6085 8.86784 13.6478C8.86751 13.6479 8.86724 13.6481 8.86691 13.6482C8.86655 13.6483 8.86625 13.6485 8.86589 13.6486C8.75333 13.696 8.62974 13.7222 8.49998 13.7222Z" fill="#9CCDFE"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="line">
+							<span class="_to-right"></span>
+						</div>
+						<div class="popup-info__content">
+							<div class="popup-info__one one-popup-info">
+								<div class="one-popup-info__item">
+									<div class="one-popup-info__title">Key Features</div>
+									<div class="one-popup-info__items">
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/01.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">
+												Identify Privileged Users with
+weak passwords that can be
+easily cracked or guessed
+											</div>
+										</div>
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/02.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">Discover critical vulnerabilities in your AD Infrastructure</div>
+										</div>
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/03.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">Highlight inactive admin accounts and those with old passwords</div>
+										</div>
+									</div>
+								</div>
+								<div class="one-popup-info__item">
+									<div class="one-popup-info__title">Outcome</div>
+									<div class="one-popup-info__items">
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/04.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">Discover Indicators of Compromise and Indicators of Exposure in your AD.</div>
+										</div>
+										<div class="one-popup-info__item item-one-popup-info">
+											<div class="item-one-popup-info__icon">
+												<img src="./assets/img/popup/05.svg" alt="Image">
+											</div>
+											<div class="item-one-popup-info__text">Prioritized AD Security Guidance with MITRE ATT&CK correlation.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="line">
+								<span></span>
+							</div>
+							<div class="poup-info__two two-popup-info">
+								<div class="two-popup-info__title">Build A Secure Identity Strategy</div>
+								<div class="two-popup-info__info">
+									<p>
+										The Blue Island Security Digital Identity Assessment (DIA) provides a comprehensive analysis of your privileged users, including how their accounts are managed and identifying critical vulnerabilities in your Active Directory (AD) configuration. The assessment also evaluates risks associated with Group Policy and potential weaknesses in AD Delegation.
+									</p>
+									<p>
+										Our DIA offers visibility into your current identity management state and includes prioritized recommendations for remediating or mitigating any discovered weaknesses or vulnerabilities.
+									</p>
+								</div>
+							</div>
+							<div class="line">
+								<span class="_to-right"></span>
+							</div>
+							<div class="poup-info__two two-popup-info">
+								<div class="two-popup-info__title">Discovery & Strategy Packages</div>
+								<div class="two-popup-info__info">
+									<p>
+										Blue Island Security will deliver an assessment of your Active Directory or Azure Active Directory, providing clear recommendations on any security enhancements and a foundation roadmap for your Identity Journey.
+									</p>
+								</div>
+							</div>
+							<div class="poup-info__three three-popup-info">
+								<div class="three-popup-info__title">What we’ll do</div>
+								<div class="three-popup-info__items">
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">1</div>
+										<div class="item-three-popup-info__text">Integrate with your Active Directory or Azure Active Directory</div>
+									</div>
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">2</div>
+										<div class="item-three-popup-info__text">Scan for security weaknesses across AD Admins, Group Policy and more</div>
+									</div>
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">3</div>
+										<div class="item-three-popup-info__text">Mapping against MITRE ATT&CK framework, validated by Identity Experts</div>
+									</div>
+									<div class="three-popup-info__item item-three-popup-info">
+										<div class="item-three-popup-info__icon">4</div>
+										<div class="item-three-popup-info__text">Comprehensive report with prioritized findings & remediation guidance</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-info__actions">
+								<div class="line">
+									<span></span>
+								</div>
+								<a href="#" class="_button">
+									<span class="_button-text">Let`s talk</span>
+									<span class="icon-element">
+										<span class="--icon-01"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-fls-popup="subsc-popup" aria-hidden="true" class="popup popup-info subsc-popup">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+							<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+						</svg>
+					</button>
+					<div data-fls-popup-content="" class="popup-info__body">
+						<div class="popup-info__top">
+							<div class="popup-info__title">You’ve successfully subscribed!</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-fls-popup="form-back-popup" aria-hidden="true" class="popup popup-info subsc-popup">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+							<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+						</svg>
+					</button>
+					<div data-fls-popup-content="" class="popup-info__body">
+						<div class="popup-info__top">
+							<div class="popup-info__title">
+								Thank you! Your message has been successfully sent. We’ll get back to you shortly.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
