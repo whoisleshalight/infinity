@@ -15,7 +15,9 @@ body::after {
 [data-fls-popup-open] body::after {
 	opacity: 1;
 }
-
+.file-box{
+	margin-top: 20px;
+}
 [data-fls-popup] {
 	position: fixed;
 	top: 0;

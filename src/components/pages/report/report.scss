@@ -168,13 +168,21 @@
 
 	&__download {}
 }
-
+._report-download-item{
+	display: none;
+	
+}
+._block-report{
+	._report-download-item{
+		display: block;
+	}
+}
 .download-report {
 	// padding-top: 100px;
 	// padding-bottom: 100px;
 	@include adaptiveValue("padding-top", 100, 40, 0, 1920, 320);
 	@include adaptiveValue("padding-bottom", 100, 40, 0, 1920, 320);
-
+	
 	&__container {
 		display: flex;
 		justify-content: center;
@@ -234,14 +242,20 @@
 	}
 
 	&__title {
+		@media (min-width:toEm(320)){
+			//   text-align: left;
+		}
+		@media (min-width:toEm(575.98)){
+			  text-align: center;
+		}
 		@include adaptiveValue("margin-bottom", 60, 40, 0, 1920, 320);
 	}
 
 	&__body {
 		display: flex;
-		// gap: 40px;
+		gap: 40px;
 		align-items: center;
-		@include adaptiveValue("gap", 40, 20, 0, 1399.98, 991.98);
+		// @include adaptiveValue("gap", 40, 20, 0, 1399.98, 991.98);
 
 		@media (min-width:toEm(320)) {
 			flex-direction: column;
@@ -258,7 +272,7 @@
 		flex-direction: column;
 		// gap: 20px;
 		line-height: 130%;
-		@include adaptiveValue("gap", 20, 10, 0, 1920, 320);
+		@include adaptiveValue("gap", 20, 16, 0, 1920, 320);
 
 		@media (min-width:toEm(991.98)) {
 			flex: 0 0 calc(50% - 20px);
@@ -350,8 +364,13 @@
 		font-weight: 600;
 		font-size: 28px;
 		@include adaptiveValue("font-size", 28, 20, 0, 1920, 320);
-		text-align: center;
 		margin-bottom: 30px;
+		@media (min-width:toEm(320)){
+			  text-align: left;
+		}
+		@media (min-width:toEm(575.98)){
+			  text-align: center;
+		}
 	}
 }
 
