@@ -1,7 +1,7 @@
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("C://Users/User/Desktop/bigroup/infinity/src/assets/svgicons/preview/iconfont.woff2?ae27c98000a368c75198b5f12989c42d") format("woff2"); 
+	src: url("D://projects/blueislalnd-group.com/blueislalnd-group_frontend/src/assets/svgicons/preview/iconfont.woff2?ce954fd600f0bc1438b22da07cff8f53") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 
